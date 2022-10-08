@@ -1,0 +1,16 @@
+.logo {
+    @include font(26px, 700, 1.12);
+    color: var(--accent-color);
+    font-family: 'Raleway', sans-serif;
+
+    text-decoration: none;
+
+    &__label {
+        @include font(26px, 700, 1.12);
+
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+
+        color: var(--logo-color);
+    }
+}

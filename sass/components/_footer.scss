@@ -1,0 +1,120 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--secondary-background-color);
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-studio {
+    @include font(26px, 700, 1.12);
+    color: var(--primary-background-color);
+
+    font-family: 'Raleway', sans-serif;
+
+    text-decoration: none;
+}
+
+// Соцмережі
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 70px;
+}
+
+.footer-title {
+    @include font(14px, 700, 1.14);
+
+    text-transform: uppercase;
+
+    color: var(--white);
+}
+
+.social-list {
+    @extend %list;
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-list__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-list__link {
+    @include flex-centered();
+    @extend %link;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.social-list__icon {
+    width: 20px;
+    height: 20px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .social-list__link & {
+        fill: var(--white);
+    }
+}
+
+// Форма
+
+.footer-form {
+    margin-left: 93px;
+}
+
+.form {
+    display: flex;
+}
+
+.form-title {
+    @include font(14px, 700, 1.14);
+
+    margin-bottom: 20px;
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--white);
+}
+
+.form__input {
+    display: flex;
+
+    min-width: 358px;
+    height: 100%;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+
+    background-color: var(--secondary-background-color);
+    color: var(--white);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    &:-webkit-autofill {
+        -webkit-text-fill-color: var(--white);
+        -webkit-box-shadow: 0 0 0 100px var(--secondary-background-color) inset;
+        }
+}
+
+.form__icon {
+    margin-left: 10px;
+}
