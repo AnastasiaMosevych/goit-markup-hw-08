@@ -519,32 +519,32 @@ img {
   background-size: cover;
   background-color: var(--hero-background);
 }
-@media (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/background-img-mob@2x.jpg);
+    background-image: url(../img/mobile/background-img-mob@2x.jpg);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .hero {
-    background-image: url(../img/background-img-tab@1x.jpg);
+    background-image: url(../img/tablet/background-img-tab@1x.jpg);
   }
 }
-@media (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (max-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/background-img-tab@2x.jpg);
+    background-image: url(../img/tablet/background-img-tab@2x.jpg);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
     min-height: 600px;
-    background-image: url(../img/background-img-desk@1x.jpg);
+    background-image: url(../img/desktop/background-img-desk@1x.jpg);
   }
 }
-@media (min-resolution: 2dppx) {
+@media screen and (min-width: 1201px) and (min-device-pixel-ratio: 2), screen and (min-width: 1201px) and (min-resolution: 192dpi), screen and (min-width: 1201px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/background-img-desk@2x.jpg);
+    background-image: url(../img/desktop/background-img-desk@2x.jpg);
   }
 }
 
@@ -770,7 +770,7 @@ textarea {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  width: 450px;
+  max-width: 450px;
   background-color: var(--primary-background-color);
   border-radius: 4px;
 }
@@ -1018,6 +1018,12 @@ textarea {
   .client-list {
     flex-wrap: nowrap;
     gap: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .client-list__item {
+    width: calc((100% - 30px) / 2);
   }
 }
 

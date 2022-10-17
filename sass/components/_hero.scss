@@ -12,29 +12,30 @@
     background-size: cover;
     background-color: var(--hero-background);
 
-    @media (min-resolution: 2dppx) {
-        background-image: url(../img/background-img-mob@2x.jpg);
+    @include retina {
+        background-image: url(../img/mobile/background-img-mob@2x.jpg);
     }
 
-    @media screen and (min-width: $tablet) {
-        background-image: url(../img/background-img-tab@1x.jpg);
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        background-image: url(../img/tablet/background-img-tab@1x.jpg);
+
+        @include retina {
+            background-image: url(../img/tablet/background-img-tab@2x.jpg);
+        }
     }
 
-    @media (min-resolution: 2dppx) {
-        background-image: url(../img/background-img-tab@2x.jpg);
-    }
-
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: 1201px) {
         padding-top: 200px;
         padding-bottom: 200px;
         min-height: 600px; 
 
-        background-image: url(../img/background-img-desk@1x.jpg);
-    }
+        background-image: url(../img/desktop/background-img-desk@1x.jpg);
 
-    @media (min-resolution: 2dppx) {
-        background-image: url(../img/background-img-desk@2x.jpg);
+        @include retina {
+            background-image: url(../img/desktop/background-img-desk@2x.jpg);
+        }
     }
+    
 }
 
 .hero__title {
