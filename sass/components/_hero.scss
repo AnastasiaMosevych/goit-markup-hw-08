@@ -42,13 +42,17 @@
     @include font(26px, 900, 1.6);
 
     margin: 0 auto 30px auto;
-    width: 360px;
+    width: 100%;
 
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
 
     color: var(--white);
+
+    @media screen and (min-width: $tablet) {
+        width: 360px;
+    }
 
     @media screen and (min-width: $desktop) {
         @include font(44px, 900, 1.4);
