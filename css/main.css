@@ -1056,6 +1056,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .client-list__link {
     width: 170px;
+    height: 92px;
   }
 }
 .client-list__link:hover, .client-list__link:focus {
