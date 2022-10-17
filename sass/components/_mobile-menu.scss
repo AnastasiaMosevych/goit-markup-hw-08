@@ -42,6 +42,8 @@
     @include font (18px, 500, 1.2);
 
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 
     @media screen and (min-width: $desktop) {
     display: none;        
@@ -62,6 +64,7 @@
 
 .social-net__link {
     @extend %link;
+    color: var(--accent-color);
 
     &::after {
         content: "";
@@ -72,6 +75,4 @@
         border: 1px solid rgba(33, 33, 33, 0.2);
         transform: rotate(90deg);
     }
-
-    color: var(--accent-color);
 }
