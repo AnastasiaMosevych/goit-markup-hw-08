@@ -179,7 +179,18 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="photos">
                     <li class="photos__item">
-                        <img src="./img/ihor.jpg" alt="photo of product designer" class="photos__img">
+                        <picture>
+                            <source srcset="./img/desktop/ihor-desk.jpg 1x,
+                                            ./img/desktop/ihor-desk@2x.jpg 2x"
+                                    media="(min-width: 1200px">
+                            <source srcset="./img/tablet/ihor-tab.jpg 1x,
+                                        ./img/tablet/ihor-tab@2x.jpg 2x"
+                                    media="(min-width: 768px">
+                            <source srcset="./img/mobile/ihor-mob.jpg 1x,
+                                            ./img/mobile/ihor-mob@2x.jpg 2x"
+                                    media="(max-width: 767px">
+                            <img src="./img/desktop/ihor-desk.jpg" alt="photo of product designer" class="photos__img">
+                        </picture>   
                         <div class="photos__bottom">
                             <h3 class="photos__title">Ігор Дем'яненко</h3>
                             <p class="photos__text">Product Designer</p>
@@ -220,7 +231,19 @@
                         </div>
                     </li>
                     <li class="photos__item">
-                        <img src="./img/olha.jpg" alt="photo of frontend developer" width="270" class="photos__img">
+                        <picture>
+                            <source srcset="./img/desktop/olha-desk.jpg 1x,
+                                            ./img/desktop/olha-desk@2x.jpg 2x" 
+                                    media="(min-width: 1200px">
+                            <source srcset="./img/tablet/olha-tab.jpg 1x,
+                                            ./img/tablet/olha-tab@2x.jpg 2x" 
+                                    media="(min-width: 768px">
+                            <source srcset="./img/mobile/olha-mob.jpg 1x,
+                                            ./img/mobile/olha-mob@2x.jpg 2x"
+                                    media="(max-width: 767px">
+                            <img src="./img/desktop/olha-desk.jpg" alt="photo of frontend developer" class="photos__img">
+                        </picture>
+                        
                         <div class="photos__bottom">
                             <h3 class="photos__title">Ольга Рєпіна</h3>
                             <p class="photos__text">Frontend Developer</p>
@@ -261,7 +284,18 @@
                         </div>
                     </li>
                     <li class="photos__item">
-                        <img src="./img/mykola.jpg" alt="photo of head of marketing" width="270" class="photos__img">
+                        <picture>
+                            <source srcset="./img/desktop/mykola-desk.jpg 1x,
+                                            ./img/desktop/mykola-desk@2x.jpg 2x" 
+                                    media="(min-width: 1200px">
+                            <source srcset="./img/tablet/mykola-tab.jpg 1x,
+                                            ./img/tablet/mykola-tab@2x.jpg 2x" 
+                                    media="(min-width: 768px">
+                            <source srcset="./img/mobile/mykola-mob.jpg 1x,
+                                            ./img/mobile/mykola-mob@2x.jpg 2x" 
+                                    media="(max-width: 767px">
+                            <img src="./img/desktop/mykola-desk.jpg" alt="photo of head of marketing" class="photos__img">
+                        </picture>
                         <div class="photos__bottom">
                             <h3 class="photos__title">Микола Тарасов</h3>
                             <p class="photos__text">Marketing</p>
@@ -305,7 +339,15 @@
                         </div>
                     </li>
                     <li class="photos__item">
-                        <img src="./img/mykhailo.jpg" alt="photo of ui designer" width="270" class="photos__img">
+                        <picture>
+                            <source srcset="./img/desktop/mykhailo-desk.jpg 1x,
+                                            ./img/desktop/mykhailo-desk@2x.jpg 2x" media="(min-width: 1200px">
+                            <source srcset="./img/tablet/mykhailo-tab.jpg 1x,
+                                            ./img/tablet/mykhailo-tab@2x.jpg 2x" media="(min-width: 768px">
+                            <source srcset="./img/mobile/mykhailo-mob.jpg 1x,
+                                            ./img/mobile/mykhailo-mob@2x.jpg 2x" media="(max-width: 767px">
+                            <img src="./img/desktop/mykhailo-desk.jpg" alt="photo of ui designer" class="photos__img">
+                        </picture>
                         <div class="photos__bottom">
                             <h3 class="photos__title">Михайло Єрмаков</h3>
                             <p class="photos__text">UI Designer</p>
