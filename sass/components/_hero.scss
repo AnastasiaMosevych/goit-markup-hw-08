@@ -1,26 +1,49 @@
 .hero {
     margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     max-width: 1600px;
-    min-height: 600px;
-
+    min-height: 400px;
     text-align: center;
-    
+
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.2)), url(../img/background-img.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: var(--hero-background);
+
+    @media screen and (min-width: $tablet) {
+        background-image: url();
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        min-height: 600px; 
+
+        background-image: url();
+    }
 }
 
 .hero__title {
-    @include font(44px, 900, 1.4);
+    @include font(26px, 900, 1.6);
+
     margin: 0 auto 30px auto;
-    width: 696px;
+    width: 360px;
 
     letter-spacing: 0.06em;
+    text-align: center;
     text-transform: uppercase;
-    
+
     color: var(--white);
+
+    @media screen and (min-width: $desktop) {
+        @include font(44px, 900, 1.4);
+
+        letter-spacing: 0.06em;
+        margin: 0 auto 30px auto;
+        width: 696px;
+        
+           
+    }
 }

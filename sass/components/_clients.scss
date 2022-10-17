@@ -1,26 +1,49 @@
 .clients {
     @extend %section;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .client-list {
     @extend %list;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media screen and (min-width: $desktop) {
+        flex-wrap: nowrap;
+        gap: 0;
+    }
 }
 
 .client-list__item:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (min-width: $desktop) {
+        margin-right: 30px;   
+    }
 }
 
 .client-list__link {
     @include flex-centered();
    
-    width: 170px;
+    width: 210px;
     height: 92px;
 
     border: 1px solid var(--social-link);
     border-radius: 4px;
    
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $tablet) {
+        width: 226px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 170px;
+    }
 
     &:hover,
     &:focus {

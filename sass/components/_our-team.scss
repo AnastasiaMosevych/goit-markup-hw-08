@@ -1,21 +1,52 @@
 .section-team {
     @extend %section;
     background-color: var(--primary-background-color);
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;  
+    }
 }
 
 .photos {
     @extend %list;
-    display: flex;
+    display: block;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-wrap: nowrap;
+        gap: 0;
+    }
 }
 
 .photos__item {
     background-color: var(--white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    margin-bottom: 30px;
+
+    &:not(:last-child) {
+        @media screen and (min-width: $desktop) {
+            margin-right: 30px;
+        }
+    }
 }
 
-.photos__item:not(:last-child) {
-    margin-right: 30px;
+.photos__img {
+    width: 450px;
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
 }
 
 .photos__bottom {
@@ -40,7 +71,7 @@
     text-align: center;
 }
 
-// Social icons
+// // Social icons
 
 .social {
     @extend %list;

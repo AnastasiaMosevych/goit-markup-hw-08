@@ -1,8 +1,16 @@
 .header {
-    border-bottom: 1px solid var(--header-border);
+    @media screen and (min-width: $desktop) {
+        border-bottom: 1px solid var(--header-border);
+    }
+    
 }
 
 .header-nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: $desktop) {
+        align-items: baseline;
+    }
 }

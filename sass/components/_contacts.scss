@@ -1,38 +1,88 @@
 .contacts {
+    display: none;
     @extend %list;
-    display: flex;
-    margin-left: auto;
+    margin-bottom: 64px;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        margin-left: 96px;
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+    }
+}
+
+.contacts__item {
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+
+        @media screen and (min-width: $tablet) and (max-width: 2000px) {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .contacts__item+.contacts__item {
-    margin-left: 50px;
+    @media screen and (min-width: $desktop) {
+        margin-left: 50px;
+    } 
 }
 
 .contacts__link {
-    @include font(14px, 500, 1.14);
+    @include font (24px, 500, 1.17);
     @extend %link;
-
-    display: flex;
-    align-items: center;
-    color: var(--primary-text-color);
 
     letter-spacing: 0.02em;
 
+    color: var(--primary-text-color);
+
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $tablet) {
+        @include font(14px, 500, 1.14);
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+            @include font(14px, 500, 1.14);
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
 
     &:hover,
     &:focus {
         color: var(--accent-color);
+        @include font (34px, 500, 1.17);
+
+        @media screen and (min-width: $tablet) and (max-width: 2500px) {
+            @include font(14px, 500, 1.14);
+        }
+    }
+
+    &:hover .contacts__icon,
+    &:focus .contacts__icon {
+        @media screen and (min-width: $desktop) {
+            fill: var(--accent-color); 
+        }
     }
 }
 
 .contacts__icon {
-    margin-right: 10px;
+    display: none;
 
-    fill: var(--primary-text-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: $desktop) {
+        display: block;
+        margin-right: 10px;
 
-    .contacts__link:hover & {
-        fill: var(--accent-color);
+        fill: var(--primary-text-color);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
     }
 }

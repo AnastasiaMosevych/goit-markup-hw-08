@@ -26,12 +26,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 528px;
-    height: 582px;
+    width: 450px;
+    height: 609px;
 
     background-color: var(--white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @media screen and (min-width: $desktop) {
+        width: 528px;
+        height: 582px;
+        
+    }
 }
 
 .modal-form {
@@ -39,11 +45,15 @@
 }
 
 .modal-form__title {
-    @include font(20px, 700, 1.15);
+    @include font(20px, 700, 1.5);
     margin-bottom: 12px;
    
     text-align: center;
     color: var(--title-text-color);
+
+    @media screen and (min-width: $desktop) {
+        @include font(20px, 700, 1.15);
+    }
 }
 
 textarea {
@@ -95,7 +105,12 @@ textarea {
 }
 
 .modal-form__label {
+   font-size: 12px;
     margin-bottom: 4px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+    }
 }
 
 .modal-form__field {
@@ -113,11 +128,18 @@ textarea {
 }
 
 .checkbox-label {
+    
     @include flex-centered();
+
+    font-size: 12px;
     
     position: relative;
 
     margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+    }
 }
 
 .checkbox-link {
