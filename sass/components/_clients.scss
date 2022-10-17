@@ -36,7 +36,7 @@
     @include flex-centered();
    
     width: 100%;
-    height: 100%;
+    height: 92px;
 
     border: 1px solid var(--social-link);
     border-radius: 4px;
@@ -45,7 +45,6 @@
 
     @media screen and (min-width: $mobile) {
         width: 210px;
-        height: 92px;
     }
 
     @media screen and (min-width: $tablet) {
