@@ -1265,15 +1265,13 @@ textarea {
 @media screen and (min-width: 1200px) {
   .footer-container {
     display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .for-tablet {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
   }
 }
@@ -1292,6 +1290,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .logo-address {
     text-align: left;
+    margin-bottom: 0;
   }
 }
 
@@ -1328,6 +1327,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .footer-social {
     margin-left: 70px;
+    margin-bottom: 0;
     text-align: left;
   }
 }
