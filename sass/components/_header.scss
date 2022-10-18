@@ -1,14 +1,11 @@
 .header {
     padding-top: 16px;
     padding-bottom: 16px;
+    border-bottom: 1px solid var(--header-border);
 
     @media screen and (min-width: $tablet) {
         padding-top: 0;
         padding-bottom: 0;
-    }
-
-    @media screen and (min-width: $desktop) {
-        border-bottom: 1px solid var(--header-border);
     }
 }
 
