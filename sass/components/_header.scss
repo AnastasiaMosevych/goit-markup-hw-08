@@ -2,6 +2,11 @@
     padding-top: 16px;
     padding-bottom: 16px;
 
+    @media screen and (min-width: $tablet) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     @media screen and (min-width: $desktop) {
         border-bottom: 1px solid var(--header-border);
     }
@@ -11,6 +16,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+    }
 
     @media screen and (min-width: $desktop) {
         align-items: baseline;
