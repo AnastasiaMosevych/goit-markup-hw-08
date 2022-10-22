@@ -8,7 +8,6 @@
     }
 }
 
-
 .img {
     @extend %list;
     display: none;
@@ -48,6 +47,5 @@
         text-transform: uppercase;
         
         color: var(--white);
-    }
-    
+    }  
 }
