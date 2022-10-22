@@ -14,6 +14,7 @@
 
     @include retina {
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.2)), url(../img/mobile/background-img-mob@2x.jpg);
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.2)), url(../img/mobile/background-img-mob@3x.jpg);
     }
 
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
@@ -21,6 +22,7 @@
 
         @include retina {
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.2)), url(../img/tablet/background-img-tab@2x.jpg);
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.2)), url(../img/tablet/background-img-tab@3x.jpg);
         }
     }
 
@@ -33,6 +35,7 @@
 
         @include retina {
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.2)), url(../img/desktop/background-img-desk@2x.jpg);
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.2)), url(../img/desktop/background-img-desk@3x.jpg);
         }
     }
     
